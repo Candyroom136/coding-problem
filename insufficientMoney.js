@@ -3,9 +3,13 @@
 // 이 놀이기구를 count번 탈 때 가지고 있는 money에 비해 부족한 돈이 얼마인지 묻는 문제.
 // 단, 돈이 부족하지 않으면 0을 리턴한다.
 
+// 시간복잡도 O(1);
+// totalPrice을 등차수열의 합 공식으로 한번에 구하였음.
+
 function insufficientMoney(price, money, count) {
   const totalPrice = price * count * (count + 1) / 2
   const remain = totalPrice >= money ? totalPrice - money : 0;
+
   return remain;
 }
 
