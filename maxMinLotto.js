@@ -10,7 +10,6 @@ function maxMinLotto(lottos, win_nums) {
 
   for (let number of lottos) {
     const winNumberIndex = win_nums.indexOf(number)
-
     if (winNumberIndex !== -1 && number !== 0) {
       sameNumberCounter++;
     } else if (number === 0) {
