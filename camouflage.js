@@ -6,7 +6,6 @@ function getCamouflageNumber(clothes) {
   let quantityOfClothes = {};
     
   for (let i = 0; i < clothes.length; i++) {
-    const clothesType = clothes[i][1]
     const currentQuantityOfClothes = quantityOfClothes[clothes[i][1]] || 0;
     quantityOfClothes[clothes[i][1]] = currentQuantityOfClothes + 1;     
   }

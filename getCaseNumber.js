@@ -1,6 +1,6 @@
 const interface = require('readline').createInterface({ 
-    input: process.stdin, 
-    output: process.stdout 
+  input: process.stdin, 
+  output: process.stdout 
 });
 const input = [];
 interface.on
