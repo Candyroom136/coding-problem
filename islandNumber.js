@@ -19,7 +19,7 @@ interface.on(
 			console.log(currentIslandNumber);
 		} 
 
-    	process.exit();
+    process.exit();
 
 		function makeMap() {
 			const [width, height] = 	input.shift().split(' ').map(cur => Number(cur));
@@ -53,13 +53,13 @@ interface.on(
 			function visitIsland(x, y) {
 				if(isValidLocation(x, y)) {
 					isVisited[x][y] = true;
+					visitIsland(x + 1, y + 1);
 					visitIsland(x + 1, y);
-					visitIsland(x - 1, y);
+					visitIsland(x + 1, y - 1);
 					visitIsland(x, y + 1);
 					visitIsland(x, y - 1);
-					visitIsland(x + 1, y + 1);
-					visitIsland(x + 1, y - 1);
 					visitIsland(x - 1, y + 1);
+					visitIsland(x - 1, y);
 					visitIsland(x - 1, y - 1);
 				} else {
 					return 0;
