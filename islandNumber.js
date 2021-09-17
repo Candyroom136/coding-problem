@@ -19,8 +19,6 @@ interface.on(
 			console.log(currentIslandNumber);
 		} 
 
-    process.exit();
-
 		function makeMap() {
 			const [width, height] = 	input.shift().split(' ').map(cur => Number(cur));
 			const map = new Array(height).fill(0).map(cur => new Array(width));
@@ -34,9 +32,10 @@ interface.on(
 
 			return map;
 		}
+	
 
 		function getIslandNumber(map) {
-			const isVisited = new Array(map.length).fill(0).map(cur => new Array(map[0].length).fill(false));
+			const isVisited = new Array(map.length).fill(0).map(cur => new Array(map[0].length).fill(false)); []
 			let islandNumber = 0;
 
 			for (let i = 0; i < map.length; i++) {
@@ -70,5 +69,5 @@ interface.on(
 				return isVisited[x] && !isVisited[x][y] && map[x][y] === '1'
 			}
 		}
-  }
+ 	}
 )
