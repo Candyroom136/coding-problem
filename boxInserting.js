@@ -14,6 +14,7 @@ interface.on(
   function () {
 
 		const sizeOfBoxes = input[1].split(' ').map(cur => Number(cur));
+
 		const memo = [1];
 
 		for (let i = 1; i < sizeOfBoxes.length; i++) {
